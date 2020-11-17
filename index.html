@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alexander's Music Player</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/238ea6e7ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <header>
+        <span><i class="fas fa-chevron-left"></i></span>
+        <span><p>Playlist - Power</p></span>
+        <span><i class="fas fa-ellipsis-v"></i></span>
+      </header>
+      <main>
+        <section id="playlist">
+          <article class="song active" id="0">
+            <span
+              ><img src="images/indestructible.png" />
+              <p><strong>Disturbed</strong><br />Indestructible</p></span
+            >
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+          <article class="song" id="1">
+            <span
+              ><img src="images/vulgardisplayofpower.png" />
+              <p><strong>Pantera</strong><br />Walk</p>
+            </span>
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+          <article class="song" id="2">
+            <span
+              ><img src="images/asylum.jpg" />
+              <p><strong>Disturbed</strong><br />Asylum</p>
+            </span>
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+          <article class="song" id="3">
+            <span
+              ><img src="images/tonightthestarsrevolt.jpg" />
+              <p><strong>Powerman 5000</strong><br />When Worlds Collide</p>
+            </span>
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+          <article class="song" id="4">
+            <span
+              ><img src="images/thesickness.png" />
+              <p><strong>Disturbed</strong><br />Down With The Sickness</p>
+            </span>
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+          <article class="song" id="5">
+            <span
+              ><img src="images/destroyer.png" />
+              <p><strong>KISS</strong><br />God Of Thunder</p>
+            </span>
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+          <article class="song" id="6">
+            <span
+              ><img src="images/immortalized.png" />
+              <p><strong>Disturbed</strong><br />The Vengeful One</p>
+            </span>
+            <span><i class="fas fa-play-circle"></i></span>
+          </article>
+        </section>
+        <section>
+          <article>
+            <img id="album" src="images/indestructible.png" />
+          </article>
+          <article class="title">
+            <span><i class="fas fa-plus-circle"></i></span>
+            <span
+              ><p id="songtitle">
+                <strong>Disturbed</strong><br />Indestructible
+              </p></span
+            >
+            <span><i class="fas fa-heart"></i></span>
+          </article>
+          <article class="time">
+            <span id="currenttime"><p>0:00</p></span>
+            <time><span id="progressbar"></span></time>
+            <span id="songlength"><p>0:30</p></span>
+          </article>
+          <article class="control">
+            <span id="repeat"><i class="fas fa-retweet"></i></span>
+            <span id="previous"><i class="fas fa-backward"></i></span>
+            <span id="play"><i class="fas fa-play-circle"></i></span>
+            <span id="next"><i class="fas fa-forward"></i></span>
+            <span id="shuffle"
+              ><i class="fas fa-random"></i
+            ></span>
+          </article>
+        </section>
+      </main>
+    </nav>
+    <script type="text/javascript" src="player.js"></script>
+  </body>
+</html>

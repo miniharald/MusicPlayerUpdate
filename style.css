@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Varela Round", sans-serif;
+  color: white;
+  padding: 1vw;
+  background-color: black;
+}
+nav {
+  width: 62vw;
+  margin: auto;
+}
+header {
+  justify-content: space-between;
+  display: flex;
+  padding: 0.5vw;
+  border-bottom: 0.1vw solid black;
+  background-image: url(images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+}
+section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+section:last-child {
+  flex-grow: 2;
+  border-left: 0.1vw solid black;
+  background-image: url(images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+section:last-child img {
+  width: 25vw;
+  padding: 1vw;
+}
+
+section:first-child > article:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+article {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+article.song.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+article.song {
+  justify-content: space-between;
+  padding-right: 1vw;
+  background: url(images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+article.song img {
+  width: 6vw;
+  padding: 1vw;
+}
+article.song p {
+  padding-top: 2vh;
+  font-size: 80%;
+}
+article.song span {
+  display: flex;
+}
+article.title {
+  padding: 1vw;
+}
+article.title p {
+  text-align: center;
+  font-size: 80%;
+}
+article.time {
+  padding: 1vw;
+  font-size: 50%;
+}
+article.control {
+  padding: 1vw;
+}
+#play {
+  font-size: 300%;
+}
+#repeat,
+#shuffle {
+  font-size: 70%;
+}
+#previous i:hover,
+#play i:hover,
+#next i:hover {
+  color: silver;
+  transition: 0.15s ease-in-out;
+}
+#repeat,
+#shuffle {
+  color: silver;
+}
+#repeat:hover,
+#shuffle:hover {
+  color: white;
+  transition: 0.15s ease-in-out;
+}
+p {
+  margin: 0;
+}
+time {
+  width: 20vw;
+  height: 0.5vh;
+  display: flex;
+  border-radius: 1vw;
+  background-color: black;
+  cursor: pointer;
+}
+#progressbar {
+  height: 0.5vh;
+  border-radius: 1vw;
+  background-color: grey;
+}
