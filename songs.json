@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "artist": "Disturbed",
+    "songTitle": "Indestructible",
+    "songLink": "https://ia802800.us.archive.org/20/items/cd_indestructible_disturbed/disc1/01.%20Disturbed%20-%20Indestructible_sample.mp3", 
+    "albumLink": "images/indestructible.png"
+  },
+  {
+    "id": 2,
+    "Artist": "Pantera",
+    "SongTitle": "Walk",
+    "SongLink": "https://ia800109.us.archive.org/11/items/cd_vulgar-display-of-power_pantera_2/disc1/03.%20Pantera%20-%20Walk_sample.mp3", 
+    "AlbumLink": "images/vulgardisplayofpower.png"
+  },
+  {
+    "id": 3,
+    "Artist": "Disturbed",
+    "SongTitle": "Asylum",
+    "SongLink": "https://ia902900.us.archive.org/14/items/cd_asylum_disturbed/disc1/02.%20Disturbed%20-%20Asylum_sample.mp3", 
+    "AlbumLink": "images/asylum.jpg"
+  },
+  {
+    "id": 4,
+    "Artist": "Powerman 5000",
+    "SongTitle": "When Worlds Collide",
+    "SongLink": "https://ia802804.us.archive.org/12/items/cd_tonight-the-stars-revolt_powerman-5000/disc1/03.%20Powerman%205000%20-%20When%20Worlds%20Collide_sample.mp3", 
+    "AlbumLink": "images/tonightthestarsrevolt.jpg"
+  },
+  {
+    "id": 5,
+    "Artist": "Disturbed",
+    "SongTitle": "Down With The Sickness",
+    "SongLink": "https://ia802804.us.archive.org/14/items/cd_the-sickness_disturbed_1/disc1/04.%20Disturbed%20-%20Down%20With%20the%20Sickness_sample.mp3", 
+    "AlbumLink": "images/thesickness.png"
+  },
+  {
+    "id": 6,
+    "Artist": "KISS",
+    "SongTitle": "God of Thunder",
+    "SongLink": "https://ia800108.us.archive.org/17/items/cd_destroyer_kiss/disc1/03.%20Kiss%20-%20God%20Of%20Thunder_sample.mp3", 
+    "AlbumLink": "images/destroyer.png"
+  },
+  {
+    "id": 7,
+    "Artist": "Disturbed",
+    "SongTitle": "The Vengeful One",
+    "SongLink": "https://ia801501.us.archive.org/25/items/cd_the-vengeful-one_disturbed/disc1/01.%20Disturbed%20-%20The%20Vengeful%20One_sample.mp3", 
+    "AlbumLink": "images/immortalized.png"
+  }
+]

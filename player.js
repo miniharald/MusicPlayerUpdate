@@ -1,33 +1,5 @@
 //vektor med låtarna
-var songs = [
-  "https://ia802800.us.archive.org/20/items/cd_indestructible_disturbed/disc1/01.%20Disturbed%20-%20Indestructible_sample.mp3",
-  "https://ia800109.us.archive.org/11/items/cd_vulgar-display-of-power_pantera_2/disc1/03.%20Pantera%20-%20Walk_sample.mp3",
-  "https://ia902900.us.archive.org/14/items/cd_asylum_disturbed/disc1/02.%20Disturbed%20-%20Asylum_sample.mp3",
-  "https://ia802804.us.archive.org/12/items/cd_tonight-the-stars-revolt_powerman-5000/disc1/03.%20Powerman%205000%20-%20When%20Worlds%20Collide_sample.mp3",
-  "https://ia802804.us.archive.org/14/items/cd_the-sickness_disturbed_1/disc1/04.%20Disturbed%20-%20Down%20With%20the%20Sickness_sample.mp3",
-  "https://ia800108.us.archive.org/17/items/cd_destroyer_kiss/disc1/03.%20Kiss%20-%20God%20Of%20Thunder_sample.mp3",
-  "https://ia801501.us.archive.org/25/items/cd_the-vengeful-one_disturbed/disc1/01.%20Disturbed%20-%20The%20Vengeful%20One_sample.mp3"
-];
-//vektor med albumbilder
-var albums = [
-  "images/indestructible.png",
-  "images/vulgardisplayofpower.png",
-  "images/asylum.jpg",
-  "images/tonightthestarsrevolt.jpg",
-  "images/thesickness.png",
-  "images/destroyer.png",
-  "images/immortalized.png"
-];
-//vektor med artist och låttitel
-var songTitle = [
-  "<strong>Disturbed</strong><br />Indestructible",
-  "<strong>Pantera</strong><br />Walk",
-  "<strong>Disturbed</strong><br />Asylum",
-  "<strong>Powerman 5000</strong><br />When Worlds Collide",
-  "<strong>Disturbed</strong><br />Down With The Sickness",
-  "<strong>KISS</strong><br />God Of Thunder",
-  "<strong>Disturbed</strong><br />The Vengeful One"
-];
+let songs = [];
 
 var timebarFill = document.getElementById("progressbar"); //variabel som visar grafiskt hur långt gången låten är
 var currentTime = document.getElementById("currenttime"); //variabel som tar reda på vart nuvarande tid ska ligga
@@ -39,7 +11,7 @@ var song = new Audio(); //ljudobjektet skapas
 var currentSong = 0; //variabel som fungerar som ett index i vektorerna
 
 //spelar låt vid laddning
-window.onload = playSong;
+window.onload = loadSongs();
 
 //klick-event
 $("#play").on("click", playOrPause);
@@ -52,11 +24,22 @@ $(".song").click(function() {
   playSong();
 });
 
+async function loadSongs() {
+  let songsData = await $.getJSON('songs.json');
+
+  for (let song of songsData) {
+    console.log(song);
+    songs.push(song);
+  }
+  playSong();
+}
+
 //funktion för att spela låt med tillhörande info
 function playSong() {
-  song.src = songs[currentSong];
-  $("#album").attr("src", albums[currentSong]);
-  document.getElementById("songtitle").innerHTML = songTitle[currentSong];
+  song.src = songs[currentSong].SongLink;
+  $("#album").attr("src", songs[currentSong].AlbumLink);
+  document.getElementById("artist").innerHTML = songs[currentSong].Artist;
+  document.getElementById("songTitle").innerHTML = songs[currentSong].SongTitle;
   song.play();
   $(".song").removeClass("active");
   $(".song")

@@ -59,6 +59,7 @@ article.song {
   background: url(images/bg.png);
   background-size: cover;
   background-position: 50% 50%;
+  cursor: pointer;
 }
 article.song img {
   width: 6vw;
@@ -87,10 +88,12 @@ article.control {
 }
 #play {
   font-size: 300%;
+  cursor: pointer;
 }
 #repeat,
 #shuffle {
   font-size: 70%;
+  cursor: pointer;
 }
 #previous i:hover,
 #play i:hover,
@@ -98,9 +101,16 @@ article.control {
   color: silver;
   transition: 0.15s ease-in-out;
 }
+#previous,
+#next {
+  color: silver;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
 #repeat,
 #shuffle {
   color: silver;
+  cursor: pointer;
 }
 #repeat:hover,
 #shuffle:hover {
@@ -122,4 +132,7 @@ time {
   height: 0.5vh;
   border-radius: 1vw;
   background-color: grey;
+}
+#artist {
+  font-weight: bold;
 }
